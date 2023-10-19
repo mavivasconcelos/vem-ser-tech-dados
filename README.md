@@ -8,7 +8,7 @@
 
 O [Vem Ser Tech - Dados](https://ada.tech/sou-aluno/programas/ifood-vem-ser-tech) é um programa desenvolvido pela [Ada](https://ada.tech/) em parceria com o [Potência Tech](https://potenciatech.com.br/), projeto fundado pelo iFood que promove a inclusão e viabiliza a entrada de pessoas no mercado de tecnologia. 
 
-Esse repositório é dedicado ao meu aprendizado durante essa jornada. Nele você encontrará aulas, exercícios e projetos desenvolvidos durante o curso.
+Esse repositório é dedicado ao meu aprendizado durante essa jornada na área de Dados. Nele você encontrará aulas, exercícios e projetos desenvolvidos durante o curso.
 
 Nosso curso é dividido em seis módulos:
 
