@@ -21,7 +21,7 @@ Lógica de Programação com Python I
 - Funções;
 - Strings;
 - Funções de strings;
-- Projeto do móddulo.
+- Projeto do módulo.
 
 
 
