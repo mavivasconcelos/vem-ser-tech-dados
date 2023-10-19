@@ -1,1 +1,15 @@
-# Módulo 05
+<h1 align="center">
+Técnicas de Programação com Python I
+</h1>
+
+<p align="center">
+<img src="https://img.shields.io/static/v1?label=Status&message=AGUARDANDO&color=blue&style=for-the-badge"/>
+</p>
+
+
+### Conteúdo:
+
+- Git e Github;
+- Numpy;
+- Pandas;
+- Projeto do módulo.
