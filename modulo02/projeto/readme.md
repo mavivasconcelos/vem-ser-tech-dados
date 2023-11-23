@@ -18,6 +18,8 @@ Nossas soluções foram desenvolvidas com base nos conceitos que aprendemos no m
 
 Cada projeto inclui uma descrição, dataset (quando aplicável) e notebook com a resolução. 
 
+Você pode acessar o notebook do projeto [aqui](https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo02/projeto/projeto_moduloII_grupo6.ipynb).
+
 #
 
 📚 O projeto é uma parte importante do processo de aprendizado! 
