@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/image01.png" width=75%/>
+<img src="https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/image01.png" width=80%/>
 </p>
 
 <p align="center">
