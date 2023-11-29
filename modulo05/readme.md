@@ -1,5 +1,5 @@
 <h1 align="center">
-Técnicas de Programação com Python I
+Técnicas de Programação com Python 
 </h1>
 
 <p align="center">
