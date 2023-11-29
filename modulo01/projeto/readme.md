@@ -20,12 +20,4 @@ Cada projeto inclui uma descrição, dataset (quando aplicável) e notebook com 
 
 #
 
-📚 O projeto é uma parte importante do processo de aprendizado! 
-
-
-
-
-
-
-
-
+📚 O projeto é uma parte importante do processo de aprendizagem! 
