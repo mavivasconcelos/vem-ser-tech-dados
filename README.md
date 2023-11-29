@@ -10,16 +10,15 @@ O [Vem Ser Tech - Dados](https://ada.tech/sou-aluno/programas/ifood-vem-ser-tech
 
 Esse repositório é dedicado ao meu aprendizado durante essa jornada na área de Dados. Nele você encontrará aulas, exercícios e projetos desenvolvidos durante o curso.
 
-Nosso curso é dividido em seis módulos:
+Nosso curso é dividido em sete módulos:
 
 - Módulo 1: Lógica de Programação com Python I;
 - Módulo 2: Lógica de Programação com Python II;
 - Módulo 3: Banco de Dados;
 - Módulo 4: Visualização com Power BI;
 - Módulo 5: Técnicas de Programação com Python;
-- Módulo 6: Estatística.
-
-
+- Módulo 6: Estatística;
+- Módulo 7: Orientação de Carreira.
 
 
 &nbsp;
