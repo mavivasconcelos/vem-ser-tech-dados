@@ -1,5 +1,5 @@
 <h1 align="center">
-Estatística I
+Estatística 
 </h1>
 
 <p align="center">
