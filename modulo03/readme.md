@@ -1,5 +1,5 @@
 <h1 align="center">
-Banco de Dados I
+Banco de Dados
 </h1>
 
 <p align="center">
