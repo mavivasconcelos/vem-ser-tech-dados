@@ -22,4 +22,4 @@ Você pode acessar o notebook do projeto [aqui](https://github.com/felipeoliveir
 
 #
 
-📚 O projeto é uma parte importante do processo de aprendizado! 
+📚 O projeto é uma parte importante do processo de aprendizagem! 
