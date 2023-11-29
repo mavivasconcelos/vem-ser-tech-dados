@@ -14,10 +14,10 @@ Nosso curso é dividido em seis módulos:
 
 - Módulo 1: Lógica de Programação com Python I;
 - Módulo 2: Lógica de Programação com Python II;
-- Módulo 3: Banco de Dados I;
+- Módulo 3: Banco de Dados;
 - Módulo 4: Visualização com Power BI;
-- Módulo 5: Técnicas de Programação com Python I;
-- Módulo 6: Estatística I.
+- Módulo 5: Técnicas de Programação com Python;
+- Módulo 6: Estatística.
 
 
 
