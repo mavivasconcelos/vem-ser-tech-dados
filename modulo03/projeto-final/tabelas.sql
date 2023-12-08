@@ -2,8 +2,7 @@
    Criação das tabelas e inserção de dados
    ----------------------------------------*/
 
-CREATE SCHEMA foodie_fi;
-SET search_path = foodie_fi;
+CREATE DATABASE database;
 
 CREATE TABLE plans (
   plan_id INTEGER,
@@ -19,7 +18,6 @@ VALUES
   ('2', 'pro monthly', '19.90'),
   ('3', 'pro annual', '199'),
   ('4', 'churn', null);
-
 
 
 CREATE TABLE subscriptions (
