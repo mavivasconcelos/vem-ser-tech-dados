@@ -106,7 +106,7 @@ WITH cte AS (
    LEAD(p.plan_name,1) 
    OVER (PARTITION BY s.customer_id ORDER BY s.start_date) 
    AS proximo_plano 
-FROM subscriptions` s
+FROM subscriptions s
 JOIN plans p
 ON s.plan_id = p.plan_id
 WHERE start_date <= '2020-12-31')
