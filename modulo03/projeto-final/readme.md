@@ -1,6 +1,13 @@
 # Projeto: Desenvolvimento e Análise de um Sistema de Banco de Dados 
 
-## Objetivos:
+## Entrega
+
+A resolução do projeto encontra no arquivo [resolucao.md](https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/resolucao.md). Nele você encontrará o contexto do projeto, diagrama entidade-relacionamento, descrição das tabelas, análise de dados com os códigos e resultado das consultas e um relatório de negócio com recomentações para a empresa.
+
+Os scripts de criação das tabelas e inserção de dados encontram-se em [tabelas.sql](https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/tabelas.sql). E temos os dados em formato *.csv* no arquivo [dataset](https://github.com/felipeoliveirafranco/vem-ser-tech-dados/tree/main/modulo03/projeto-final/dataset).
+
+Os scripts de consulta encontram-se no arquivo [script.sql](https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/script.sql). 
+## Objetivos
 
 Projeto de Banco de Dados: Desenvolver um diagrama entidaderelacionamento (DER) para um sistema de gerenciamento.
 
