@@ -5,8 +5,9 @@
 &nbsp;
 
 Esse projeto faz parte do [módulo de Banco de Dados](https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/readme.md).
+Para isso, foi criado um contexto de negócio.
 
-Iremos trabalhar com o caso da plataforma de Streaming 🥑 Foodie-Fi.
+Iremos trabalhar com o caso da plataforma de Streaming 🥑 Foodie-Fi 🥑.
 
 ## Introdução
 
