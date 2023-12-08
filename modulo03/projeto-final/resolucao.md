@@ -1,14 +1,12 @@
 <div align='center'>
-<img src="https://github.com/claudiaanjos/projetos-analise-dados/blob/main/projetos/projeto07/images/image00.png" width="100%"/>
+<img src="https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/images/image00.png" width="100%"/>
 </div>
 
 &nbsp;
 
-Esse projeto faz parte do [8 Week SQL Challenge](https://8weeksqlchallenge.com/) disponibilizado pelo [Data With Danny](https://www.datawithdanny.com/).
+Esse projeto faz parte do [módulo de Banco de Dados](https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/readme.md).
 
-O objetivo do Desafio SQL de 8 Semanas é incentivar profissionais da área de dados a desenvolver projetos com SQL.
-Em cada projeto teremos um estudo de caso com apresentação do cenário, os problemas e os dados.
-Iremos trabalhar no terceiro estudo de caso: 🥑 [Foodie-Fi](https://8weeksqlchallenge.com/case-study-3/).
+Iremos trabalhar com o caso da plataforma de Streaming 🥑 Foodie-Fi.
 
 ## Introdução
 
@@ -16,16 +14,15 @@ Empresas baseadas em assinaturas são extremamente populares e Danny percebeu qu
 
 Danny encontrou alguns amigos inteligentes para lançar sua nova startup, Foodie-Fi, em 2020, e começou a vender assinaturas mensais e anuais, proporcionando aos clientes acesso ilimitado sob demanda a vídeos exclusivos de culinária de todo o mundo!
 
-Danny criou a Foodie-Fi com uma mentalidade orientada por dados e queria garantir que todas as decisões de investimento futuro e novos recursos fossem tomadas com base em dados. Este estudo de caso se concentra no uso de dados digitais no estilo de assinatura para responder a questões importantes de negócios.
+Danny criou a Foodie-Fi com uma mentalidade orientada por dados e queria garantir que todas as decisões de investimento futuro e novos recursos fossem tomadas com base em dados. Este projeto se concentra no uso de dados digitais no estilo de assinatura para responder a questões importantes de negócios.
 
 ## Conjunto de dados
 
-A condução da análise foi realizada com o [BigQuery](https://cloud.google.com/bigquery) do Google Cloud Platform.
+A condução da análise foi realizada com o PostgreSQL.
 
-Os scripts de criação e inserção de dados estão no arquivo [tabelas.sql]().
+Os scripts de criação e inserção de dados estão no arquivo [tabelas.sql](https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/tabelas.sql). Mas você também pode encontrar os datasets em formato *.csv* na pasta [dataset](https://github.com/felipeoliveirafranco/vem-ser-tech-dados/tree/main/modulo03/projeto-final/dataset).
 
-Danny compartilhou o design de dados para o Foodie-Fi, incluindo breves descrições de cada uma das tabelas do banco de dados. Nosso estudo de caso se concentra em apenas 2 tabelas.
-
+Danny compartilhou o design de dados para o Foodie-Fi, incluindo breves descrições de cada uma das tabelas do banco de dados.
 
 ### Dicionário das variáveis
 
@@ -103,39 +100,229 @@ Ao cancelarem o serviço (churn), os clientes manterão o acesso até o final do
 &nbsp;
 
 <div align='center'>
-<img src="https://8weeksqlchallenge.com/images/case-study-3-erd.png" width="40%"/>
+<img src="https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/images/image13.png" width="60%"/>
 </div>
 
 &nbsp;
 
 ## Análises
 
-Este estudo de caso foi dividido por áreas de foco:
+Para realizar a análise e emitir um relatório para o Danny, fizemos algumas perguntas.
 
-* A: [Jornada do Cliente](https://github.com/claudiaanjos/projetos-analise-dados/blob/main/projetos/projeto07/parteA.md)
-* B: [Análise dos Dados](https://github.com/claudiaanjos/projetos-analise-dados/blob/main/projetos/projeto07/parteB.md)
-* C: [Pagamentos](https://github.com/claudiaanjos/projetos-analise-dados/blob/main/projetos/projeto07/parteC.md)
-* D: [Questões de Negócio](https://github.com/claudiaanjos/projetos-analise-dados/blob/main/projetos/projeto07/parteD.md)
+Os scripts encontram-se nesse [arquivo](https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/script.sql).
 
-Ao clicar em cada parte você será direcionado para a respectiva análise.
+&nbsp;
 
-No diretório [scripts](https://github.com/claudiaanjos/projetos-analise-dados/tree/main/projetos/projeto07/scripts) também encontrará essa divisão em partes.
+* Quantos clientes o Foodie-Fi já teve?
+
+&nbsp;
+
+<img src="https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/images/image02.png" width="60%"/>
+
+&nbsp;
+
+>O Foodie-Fi já teve 1000 clientes.
+
+&nbsp;
+
+* Qual é a distribuição mensal dos valores de *start_date* para o plano de teste (*trial*) em nosso conjunto de dados - utilize o início do mês como valor de agrupamento.
+
+&nbsp;
+
+<img src="https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/images/image03.png" width="60%"/>
+
+&nbsp;
+
+| numero_mes | nome_mes   | total_planos |
+|------------:|:-----------|:-------------|
+|           1 |  January   |           88 |
+|           2 |  February  |           68 |
+|           3 |  March     |           94 |
+|           4 |  April     |           81 |
+|           5 |  May       |           88 |
+|           6 |  June      |           79 |
+|           7 |  July      |           89 |
+|           8 |  August    |           88 |
+|           9 |  September |           87 |
+|          10 |  October   |           79 |
+|          11 |  November  |           75 |
+|          12 |  December  |           84 |
+
+&nbsp;
+
+>O mês que teve mais assinaturas do plano gratuito foi Março, totalizando 94. O mês com o menor número foi Fevereiro, totalizando 68 assinaturas.
+
+&nbsp;
+
+* Quais valores de *start_date* do plano ocorrem após o ano de 2020 para nosso conjunto de dados? Mostre a contagem de eventos para cada *plan_name*.
+
+&nbsp;
+
+<img src="https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/images/image04.png" width="60%"/>
+
+&nbsp;
+
+| tipo_plano   | quantidade |
+|:-------------:|:-----------:|
+| basic monthly |      8      |
+| pro monthly   |     60      |
+| pro annual    |     63      |
+| churn         |     71      |
+
+&nbsp;
+
+>A partir de 2021 não tivemos mais assinantes do teste gratuito, porém observa-se a desistência de 71 clientes.
+
+&nbsp;
+
+
+* Qual é a contagem de clientes e a porcentagem de clientes que cancelaram, arredondada para uma casa decimal?
+
+&nbsp;
+
+<img src="https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/images/image05.png" width="60%"/>
+
+&nbsp;
+
+| total_churn | porcentagem |
+|:-----------:|:-----------:|
+|     307     |    30.7     |
+
+&nbsp;
+
+>Temos que 307 clientes desistiram de continuar na plataforma, o que corresponde a 30.7% dos usuários.
+
+&nbsp;
+
+* Quantos clientes cancelaram imediatamente após o teste gratuito inicial - qual é a porcentagem disso, arredondada para o número inteiro mais próximo?
+
+&nbsp;
+
+<img src="https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/images/image06.png" width="60%"/>
+
+&nbsp;
+
+| total_churn | porcentagem |
+|:-----------:|:-----------:|
+|      92     |     9       |
+
+&nbsp;
+
+>Após o teste gratuito tivemos a desistência de 92 clientes, o que corresponde a 9% do total de usuários.
+
+&nbsp;
+
+
+* Qual é o número e a porcentagem de planos dos clientes após o teste gratuito inicial?
+
+&nbsp;
+
+<img src="https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/images/image07.png" width="60%"/>
+
+&nbsp;
+
+| plano        | total | porcentagem |
+|:------------:|:-----:|:-----------:|
+| basic monthly|  546  |    55.0     |
+| pro monthly  |  325  |    33.0     |
+| churn        |   92  |     9.0     |
+| pro annual   |   37  |     4.0     |
+
+&nbsp;
+
+>Após o período de teste gratuito, a maioria dos clientes opta pela transição para o plano mensal básico, compreendendo 55% do total de clientes. A adesão ao plano anual premium, por outro lado, é realizada por apenas 4% dos clientes.
+
+&nbsp;
+
+
+* Qual é a quantidade de clientes e a porcentagem de cada um dos 5 tipos de planos em 31 de dezembro de 2020?
+
+&nbsp;
+
+<img src="https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/images/image08.png" width="60%"/>
+
+&nbsp;
+
+| plano         | total_clientes | porcentagem |
+|:-------------:|:--------------:|:-----------:|
+| trial         |       19       |     1.9     |
+| pro annual    |      195       |    19.5     |
+| basic monthly |      224       |    22.4     |
+| churn         |      236       |    23.6     |
+| pro monthly   |      326       |    32.6     |
+
+
+&nbsp;
+
+>Em 31 de dezembro de 2020, a distribuição dos clientes nos diferentes planos é a seguinte: 32.6% optam pelo plano mensal premium, 22.4% escolhem o plano mensal básico, 19.5% aderem ao plano anual premium, 1.9% permanecem no período de teste e 23.6% optam por cancelar a assinatura.
+
+&nbsp;
+
+
+* Quantos clientes fizeram upgrade para um plano anual em 2020?
+
+&nbsp;
+
+<img src="https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/images/image09.png" width="60%"/>
+
+&nbsp;
+
+>Temos que 195 clientes fizeram upgrade para um plano anual em 2020.
+
+&nbsp;
+
+
+* Quantos dias, em média, um cliente leva para fazer upgrade para um plano anual desde o dia em que se inscreve no Foodie-Fi?
+
+&nbsp;
+
+<img src="https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/images/image10.png" width="60%"/>
+
+&nbsp;
+
+>A média, em dias, que um cliente leva para fazer upgrade para um plano anual desde o dia em que se inscreve no Foodie-Fi é de 105.
+
+&nbsp;
+
+
+* É possível dividir ainda mais esse valor médio em períodos de 30 dias (por exemplo, 0-30 dias, 31-60 dias, etc.)?
+
+&nbsp;
+
+<img src="https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/images/image11.png" width="60%"/>
+
+&nbsp;
+
+|   periodo     | total_clientes | media_dias |
+|:-------------:|:--------------:|:----------:|
+|   0-30 dias   |       48       |    10.0    |
+|  30-60 dias   |       25       |    42.0    |
+|  60-90 dias   |       33       |    71.0    |
+| 90-120 dias   |       35       |   100.0    |
+|120-150 dias   |       43       |   133.0    |
+|150-180 dias   |       35       |   162.0    |
+|180-210 dias   |       27       |   190.0    |
+|210-240 dias   |        4       |   224.0    |
+|240-270 dias   |        5       |   257.0    |
+|270-300 dias   |        1       |   285.0    |
+|300-330 dias   |        1       |   327.0    |
+|330-360 dias   |        1       |   346.0    |
+
+&nbsp;
+
+>Nos primeiros 30 dias, a maioria dos clientes opta por assinar ou atualizar para um plano anual. Após 210 dias, o número de clientes que tomam essa decisão diminui, e após 270 dias, quase não há atividade do cliente em termos de aquisição de um plano anual.
+
+* Quantos clientes fizeram downgrade de um plano mensal premium para um plano mensal básico em 2020?
+
+&nbsp;
+
+<img src="https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/images/image12.png" width="60%"/>
+
+&nbsp;
+
+>Nenhum cliente fez downgrade de um plano mensal premium para um plano mensal básico em 2020.
 
 ## Relatório
-
-### Jornada do Cliente
-
-Com base na amostra dos 8 clientes na tabela *subscriptions*, descreva brevemente a jornada de integração de cada cliente. Tente manter as descrições o mais concisas possível.
-
-Com as informações das amostras temos o seguinte:
-
-* Todos os clientes da amostra começaram com uma inscrição para o teste gratuito (*trial*) de 7 dias.
-* Os clientes 11 e 15 foram os únicos que não prosseguiram com a assinatura. O cliente 11 desistiu após o período de teste, enquanto o cliente 15 cancelou após 36 dias utilizando o plano mensal premium (*pro monthly*). 
-* O plano anual premium (*pro annual*) foi adquirido apenas pelos clientes 2, 16 e 19  com permanências de 7, 136 e 61 dias, respectivamente.
-* O cliente 16 é o que está utilizando o foodie-fi há mais tempo. Ele adquiriu o plano mensal básico (*basic monthly*) e, após 7 dias, migrou para o plano anual premium.
-* Todos os clientes assinam algum plano premium (mensal ou anual), exceto o cliente 1, que assina o plano mensal básico, e o cliente 11, que não continuou na plataforma.
-
-### Análise dos Dados
 
 Durante o período de dezembro de 2020 a dezembro de 2021, o Foodie-Fi atraiu um total de 1000 clientes. O mês de março se destacou com o maior número de assinaturas gratuitas, alcançando 94, enquanto fevereiro registrou o menor número, com 68 adesões.
 
@@ -158,36 +345,3 @@ Com base na análise acima, recomenda-se as seguintes medidas para o Foodie-Fi m
 * Oferecer descontos ou promoções para incentivar mais clientes a assinarem o plano anual premium.
 
 Seria interessante realizar pesquisas com clientes para entender melhor as suas necessidades e expectativas. Essa informação pode ser usada para melhorar a plataforma e oferecer uma experiência melhor aos clientes.
-
-
-### Pagamentos
-
-A equipe do Foodie-Fi solicitou uma nova tabela de pagamentos para o ano de 2020, com os valores pagos por cada cliente pelos planos. A tabela foi criada seguindo os requisitos abaixo:
-
-* As cobranças mensais são processadas sempre no mesmo dia do mês da data de início original de qualquer plano sujeito a pagamento mensal.
-* Quando um cliente realiza um upgrade de um plano básico para um plano mensal ou premium, o custo desse upgrade é descontado proporcionalmente do valor já pago pelo cliente no mesmo mês do plano básico. Além disso, o novo plano passa a ser efetivo imediatamente, sem a necessidade de aguardar até o próximo ciclo de faturamento.
-* No caso de upgrades de planos mensais premium para anuais premium, o pagamento é realizado no final do ciclo de faturamento atual e a vigência do novo plano também se inicia no final desse mesmo período mensal.*.
-* Quando um cliente opta pelo cancelamento, ele não realizará mais pagamentos.
-
-
-### Questões de Negócio
-
-**Avaliação do desempenho e retenção de clientes da Foodie-Fi**
-
-A Foodie-Fi é uma plataforma de streaming de conteúdo gastronômico que deve monitorar as seguintes métricas para avaliar seu desempenho: receita, custos, lucro, satisfação do cliente e retenção de clientes.
-
-A retenção de clientes é uma métrica importante para a Foodie-Fi, pois mede a satisfação dos clientes com o serviço. Para melhorar a retenção de clientes, a empresa pode considerar as seguintes alavancas de negócios:
-
-* Melhoria do conteúdo: investir na produção de conteúdo mais diversificado, exclusivo e atrativo.
-* Programas de fidelidade e recompensas: introduzir programas que recompensam a longevidade da assinatura com benefícios exclusivos.
-* Melhor suporte ao cliente: aprimorar os canais de suporte ao cliente para resolver rapidamente problemas e fornecer assistência proativa.
-* Opções de cancelamento flexíveis: oferecer opções como pausar a assinatura temporariamente em vez de cancelar completamente.
-* Pesquisas de satisfação periódicas: realizar pesquisas regulares para identificar áreas de melhoria contínua.
-* Ofertas e descontos personalizados: enviar ofertas ou descontos personalizados para clientes em risco de cancelamento.
-
-A gestão da Foodie-Fi deve escolher as alavancas de negócios mais adequadas para seu negócio e sua base de clientes. É importante monitorar a eficácia dessas iniciativas para identificar o que está funcionando e o que não está.
-
-**Observações adicionais**
-
-A gestão da Foodie-Fi deve acompanhar a taxa de churn e coletar feedback dos clientes para identificar as principais razões pelas quais eles estão cancelando suas assinaturas.
-A Foodie-Fi deve implementar as alavancas de negócios escolhidas de forma consistente e com foco na satisfação dos clientes.
