@@ -1,13 +1,23 @@
-# Projeto: Desenvolvimento e Análise de um Sistema de Banco de Dados 
+<h1 align="center">
+Projeto Final: Desenvolvimento e Análise de um Sistema de Banco de Dados 
+</h1>
+
+<p align="center">
+<img src="https://img.shields.io/static/v1?label=Status&message=EM_ANDAMENTO&color=blue&style=for-the-badge"/>
+</p>
 
 ## Entrega
 
-A resolução do projeto encontra no arquivo [resolucao.md](https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/resolucao.md). Nele você encontrará o contexto do projeto, diagrama entidade-relacionamento, descrição das tabelas, análise de dados com os códigos e resultado das consultas e um relatório de negócio com recomentações para a empresa.
+A resolução do projeto encontra-se no arquivo [resolucao.md](https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/resolucao.md). Nele você encontrará o contexto do projeto, diagrama entidade-relacionamento, descrição das tabelas, análise de dados com os códigos e resultado das consultas e um relatório de negócio com recomentações para a empresa.
 
 Os scripts de criação das tabelas e inserção de dados encontram-se em [tabelas.sql](https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/tabelas.sql). E temos os dados em formato *.csv* no arquivo [dataset](https://github.com/felipeoliveirafranco/vem-ser-tech-dados/tree/main/modulo03/projeto-final/dataset).
 
 Os scripts de consulta encontram-se no arquivo [script.sql](https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/script.sql). 
-## Objetivos
+
+
+## Projeto
+
+### Objetivos
 
 Projeto de Banco de Dados: Desenvolver um diagrama entidaderelacionamento (DER) para um sistema de gerenciamento.
 
@@ -18,7 +28,7 @@ dos dados.
 Análise de Dados: Realizar análises de dados utilizando consultas SQL
 (comando SELECT) para extrair insights relevantes dos dados armazenados.
 
-## Descrição do Projeto
+### Descrição do Projeto
 
 Diagrama Entidade-Relacionamento:
 
