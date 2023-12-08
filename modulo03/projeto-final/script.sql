@@ -1,13 +1,13 @@
-/* -----------------------
-   B - Análise dos Dados
-   -----------------------*/
+/* -------------------
+    Análise dos Dados
+   -------------------*/
 
 -- Quantos clientes o Foodie-Fi já teve?
 
 SELECT 
    count(DISTINCT customer_id) 
    AS quantidade_clientes
-FROM `projetosql-401620.foodie.subscriptions`;
+FROM subscriptions;
 
 
 -- Qual é a distribuição mensal dos valores de *start_date* para o plano de teste (*trial*) 
@@ -17,8 +17,8 @@ SELECT
    EXTRACT(MONTH FROM start_date) AS numero_mes,
    FORMAT_DATE('%B', start_date)  AS nome_mes,
    count(p.plan_id)               AS total_planos
-FROM `projetosql-401620.foodie.subscriptions` s 
-JOIN `projetosql-401620.foodie.plans`         p
+FROM subscriptions s 
+JOIN plans         p
 ON s.plan_id = p.plan_id
 WHERE p.plan_id = 0
 GROUP BY numero_mes, nome_mes
@@ -31,8 +31,8 @@ ORDER BY numero_mes;
 SELECT 
    p.plan_name      AS tipo_plano,
    count(s.plan_id) AS quantidade
-FROM `projetosql-401620.foodie.subscriptions` s 
-JOIN `projetosql-401620.foodie.plans`         p
+FROM subscriptions s 
+JOIN plans         p
 ON s.plan_id = p.plan_id
 WHERE s.start_date >= '2021-01-01'
 GROUP BY tipo_plano
@@ -46,9 +46,9 @@ SELECT
    count(distinct customer_id) AS total_churn,
    round((count(distinct customer_id)*100)/
    (SELECT count(distinct customer_id) 
-   FROM `projetosql-401620.foodie.subscriptions`), 1) 
+   FROM subscriptions), 1) 
    AS porcentagem
-FROM `projetosql-401620.foodie.subscriptions`
+FROM subscriptions
 WHERE plan_id = 4;
 
 
@@ -60,13 +60,13 @@ WITH churn_cte AS (
       LAG(plan_id, 1) 
       OVER(PARTITION BY customer_id ORDER BY plan_id) 
       AS plano_anterior
-  FROM `projetosql-401620.foodie.subscriptions`)
+  FROM subscriptions)
 
 SELECT 
    count(plano_anterior) AS total_churn, 
    round(Count(*) * 100 / 
    (SELECT count(DISTINCT customer_id) 
-   FROM `projetosql-401620.foodie.subscriptions`)) 
+   FROM subscriptions)) 
    AS porcentagem
 FROM churn_cte
 WHERE plan_id = 4 AND plano_anterior = 0;
@@ -79,17 +79,17 @@ WITH churn_cte AS (
   LAG(plan_id, 1) 
   OVER(PARTITION BY customer_id ORDER BY plan_id) 
   AS plano_anterior
-  FROM `projetosql-401620.foodie.subscriptions`)
+  FROM subscriptions)
 
 SELECT 
   p.plan_name           AS plano,
   count(plano_anterior) AS total, 
   round(count(*) * 100 / 
   (SELECT count(DISTINCT customer_id) 
-  FROM `projetosql-401620.foodie.subscriptions`)) 
+  FROM subscriptions)) 
   AS porcentagem
 FROM churn_cte c
-JOIN `projetosql-401620.foodie.plans` p
+JOIN plans p
 ON c.plan_id = p.plan_id
 WHERE plano_anterior = 0
 GROUP BY plano
@@ -106,8 +106,8 @@ WITH cte AS (
    LEAD(p.plan_name,1) 
    OVER (PARTITION BY s.customer_id ORDER BY s.start_date) 
    AS proximo_plano 
-FROM `projetosql-401620.foodie.subscriptions` s
-JOIN `projetosql-401620.foodie.plans` p
+FROM subscriptions` s
+JOIN plans p
 ON s.plan_id = p.plan_id
 WHERE start_date <= '2020-12-31')
 
@@ -116,7 +116,7 @@ SELECT
    count(DISTINCT cliente) AS total_clientes,
    round(100 * count(DISTINCT cliente)) /
    (SELECT count(DISTINCT customer_id) 
-   FROM `projetosql-401620.foodie.subscriptions`) 
+   FROM subscriptions) 
    AS porcentagem
 FROM cte
 WHERE proximo_plano IS NULL 
@@ -128,7 +128,7 @@ ORDER BY porcentagem;
 
 SELECT 
    count(distinct customer_id) AS quantidade
-FROM `projetosql-401620.foodie.subscriptions` 
+FROM subscriptions 
 WHERE plan_id = 3
 AND start_date <= '2020-12-31';
 
@@ -140,13 +140,13 @@ WITH cte AS (
    SELECT 
    customer_id AS cliente,
    start_date  AS data_plano
-FROM `projetosql-401620.foodie.subscriptions`
+FROM subscriptions
 WHERE plan_id = 3)
 
 SELECT 
    round(avg(DATE_DIFF(c.data_plano, s.start_date, DAY))) 
    AS media_dias
-FROM `projetosql-401620.foodie.subscriptions` s
+FROM subscriptions s
 JOIN cte c
 ON s.customer_id = c.cliente
 WHERE s.plan_id = 0;
@@ -160,7 +160,7 @@ WITH plano_teste AS
    SELECT 
    customer_id AS cliente, 
    start_date  AS data_teste
-   FROM `projetosql-401620.foodie.subscriptions`
+   FROM subscriptions
    WHERE plan_id = 0
 ),
 
@@ -168,7 +168,7 @@ plano_anual AS (
    SELECT 
    customer_id AS cliente, 
    start_date  AS data_anual
-   FROM `projetosql-401620.foodie.subscriptions`
+   FROM subscriptions
    WHERE plan_id = 3
 )
 
@@ -198,7 +198,7 @@ WITH cte AS (
     LEAD(plan_id,1) 
     OVER(PARTITION BY customer_id ORDER BY start_date) 
     AS proximo_plano
-FROM `projetosql-401620.foodie.subscriptions`
+FROM subscriptions
 WHERE start_date <= '2020-12-31')
 
 SELECT 
