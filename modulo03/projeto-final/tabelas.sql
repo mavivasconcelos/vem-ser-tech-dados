@@ -5,9 +5,9 @@
 CREATE DATABASE database;
 
 CREATE TABLE plans (
-  plan_id INTEGER,
-  plan_name VARCHAR(13),
-  price DECIMAL(5,2)
+  plan_id INTEGER PRIMARY KEY,
+  plan_name VARCHAR(13) NOT NULL,
+  price DECIMAL(5,2) NOT NULL
 );
 
 INSERT INTO plans
@@ -21,9 +21,10 @@ VALUES
 
 
 CREATE TABLE subscriptions (
-  customer_id INTEGER,
-  plan_id INTEGER,
-  start_date DATE
+  customer_id INTEGER PRIMARY KEY,
+  plan_id INTEGER NOT NULL,
+  start_date DATE NOT NULL
+  FOREIGN KEY (plan_id) REFERENCES plans(plan_id)
 );
 
 INSERT INTO subscriptions
