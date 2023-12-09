@@ -51,4 +51,4 @@ consultas SQL.
 - Adequação das constraints implementadas no PostgreSQL.
 - Complexidade e relevância das consultas SQL realizadas.
 - Clareza e profundidade da análise dos dados obtidos.
-- Qualidade da documentação e da apresentação oral
+- Qualidade da documentação e da apresentação oral.
