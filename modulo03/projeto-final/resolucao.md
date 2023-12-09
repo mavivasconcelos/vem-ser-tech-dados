@@ -23,8 +23,6 @@ A condução da análise foi realizada com o PostgreSQL.
 
 Os scripts de criação e inserção de dados estão no arquivo [tabelas.sql](https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/tabelas.sql). Mas você também pode encontrar as tabelas em formato *.csv* na pasta [dataset](https://github.com/felipeoliveirafranco/vem-ser-tech-dados/tree/main/modulo03/projeto-final/dataset).
 
-Optamos por utilizar o idioma inglês para nos habituarmos com a linguagem, pois é o padrão adotado pelo mercado.
-
 ### Diagrama Entidade-Relacionamento
 
 &nbsp;
