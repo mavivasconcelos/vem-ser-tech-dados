@@ -100,7 +100,7 @@ Ao cancelarem o serviço (churn), os clientes manterão o acesso até o final do
 &nbsp;
 
 <div align='center'>
-<img src="https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/images/image13.png" width="60%"/>
+<img src="https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/images/image14.png" width="60%"/>
 </div>
 
 &nbsp;
