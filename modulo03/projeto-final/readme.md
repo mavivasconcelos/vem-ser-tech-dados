@@ -30,26 +30,19 @@ Análise de Dados: Realizar análises de dados utilizando consultas SQL
 
 ### Descrição do Projeto
 
-Diagrama Entidade-Relacionamento:
-
-Desenhar um DER que inclua entidades e os relacionamentos apropriados,
+Diagrama Entidade-Relacionamento: Desenhar um DER que inclua entidades e os relacionamentos apropriados,
 atributos para cada entidade e identificar chaves primárias e estrangeiras.
 
-Implementação no PostgreSQL:
-Criar tabelas no PostgreSQL com base no DER, incluindo constraints como
-NOT NULL, UNIQUE, CHECK, e FOREIGN KEY.
-Importar dados de amostra para as tabelas criadas (os dados de amostra
+Implementação no PostgreSQL: Criar tabelas no PostgreSQL com base no DER, incluindo constraints como
+NOT NULL, UNIQUE, CHECK, e FOREIGN KEY. Importar dados de amostra para as tabelas criadas (os dados de amostra
 devem ser criados pelos alunos).
 
 Análise de Dados:
 Realizar consultas SQL para responder a perguntas específicas.
 
-Entrega do Projeto:
-Documento escrito contendo o DER, scripts SQL utilizados para criação e
+Entrega do Projeto: Documento escrito contendo o DER, scripts SQL utilizados para criação e
 importação das tabelas, e exemplos de consultas SQL com suas respectivas
-saídas e interpretações.
-
-Apresentação oral explicando o projeto, com demonstrações práticas das
+saídas e interpretações. Apresentação oral explicando o projeto, com demonstrações práticas das
 consultas SQL.
 
 **Critérios de Avaliação**
