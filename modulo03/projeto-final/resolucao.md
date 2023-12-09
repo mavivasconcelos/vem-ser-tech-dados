@@ -95,7 +95,7 @@ Ao cancelarem o serviço (churn), os clientes manterão o acesso até o final do
 
 &nbsp;
 
-### Diagrama de Relacionamento de Entidades
+### Diagrama Entidade-Relacionamento
 
 &nbsp;
 
