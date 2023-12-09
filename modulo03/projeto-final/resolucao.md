@@ -23,6 +23,18 @@ A condução da análise foi realizada com o PostgreSQL.
 
 Os scripts de criação e inserção de dados estão no arquivo [tabelas.sql](https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/tabelas.sql). Mas você também pode encontrar as tabelas em formato *.csv* na pasta [dataset](https://github.com/felipeoliveirafranco/vem-ser-tech-dados/tree/main/modulo03/projeto-final/dataset).
 
+Optamos por utilizar o idioma inglês para nos habituarmos com a linguagem, pois é o padrão adotado pelo mercado.
+
+### Diagrama Entidade-Relacionamento
+
+&nbsp;
+
+<div align='center'>
+<img src="https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/images/image14.png" width="60%"/>
+</div>
+
+&nbsp;
+
 
 ### Dicionário dos dados
 
@@ -92,16 +104,6 @@ Ao cancelarem o serviço (churn), os clientes manterão o acesso até o final do
 |     19      |    0    | 2020-06-22 |
 |     19      |    2    | 2020-06-29 |
 |     19      |    3    | 2020-08-29 |
-
-&nbsp;
-
-### Diagrama Entidade-Relacionamento
-
-&nbsp;
-
-<div align='center'>
-<img src="https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/images/image14.png" width="60%"/>
-</div>
 
 &nbsp;
 
