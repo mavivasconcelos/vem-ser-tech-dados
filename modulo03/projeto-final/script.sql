@@ -10,8 +10,7 @@ SELECT
 FROM subscriptions;
 
 
--- Qual é a distribuição mensal dos valores de *start_date* para o plano de teste (*trial*) 
--- em nosso conjunto de dados - utilize o início do mês como valor de agrupamento.
+-- Qual é a distribuição mensal dos valores de *start_date* para o plano de teste (*trial*) em nosso conjunto de dados - utilize o início do mês como valor de agrupamento.
 
 SELECT 
    EXTRACT(MONTH FROM start_date) AS numero_mes,
@@ -25,8 +24,7 @@ GROUP BY numero_mes, nome_mes
 ORDER BY numero_mes;
 
 
--- Quais valores de *start_date* do plano ocorrem após o ano de 2020 para nosso conjunto de dados? 
--- Mostre a contagem de eventos para cada *plan_name*.
+-- Quais valores de *start_date* do plano ocorrem após o ano de 2020 para nosso conjunto de dados? Mostre a contagem de eventos para cada *plan_name*.
 
 SELECT 
    p.plan_name      AS tipo_plano,
@@ -39,8 +37,7 @@ GROUP BY tipo_plano
 ORDER BY quantidade;
 
 
--- Qual é a contagem de clientes e a porcentagem de clientes que cancelaram, 
--- arredondada para uma casa decimal?
+-- Qual é a contagem de clientes e a porcentagem de clientes que cancelaram, arredondada para uma casa decimal?
 
 SELECT 
    count(distinct customer_id) AS total_churn,
@@ -52,8 +49,7 @@ FROM subscriptions
 WHERE plan_id = 4;
 
 
--- Quantos clientes cancelaram imediatamente após o teste gratuito inicial 
--- qual é a porcentagem disso, arredondada para o número inteiro mais próximo?
+-- Quantos clientes cancelaram imediatamente após o teste gratuito inicial qual é a porcentagem disso, arredondada para o número inteiro mais próximo?
 
 WITH churn_cte AS (
    SELECT *,
@@ -96,8 +92,7 @@ GROUP BY plano
 ORDER BY porcentagem DESC;
 
 
--- Qual é a quantidade de clientes e a porcentagem de cada um dos 5 
--- tipos de planos em 31 de dezembro de 2020?
+-- Qual é a quantidade de clientes e a porcentagem de cada um dos 5 tipos de planos em 31 de dezembro de 2020?
 
 WITH cte AS (
    SELECT 
@@ -133,8 +128,7 @@ WHERE plan_id = 3
 AND start_date <= '2020-12-31';
 
 
--- Quantos dias, em média, um cliente leva para fazer upgrade para um plano anual desde o dia em 
--- que se inscreve no Foodie-Fi?
+-- Quantos dias, em média, um cliente leva para fazer upgrade para um plano anual desde o dia em que se inscreve no Foodie-Fi?
 
 WITH cte AS (
    SELECT 
@@ -152,8 +146,7 @@ ON s.customer_id = c.cliente
 WHERE s.plan_id = 0;
 
 
--- É possível dividir ainda mais esse valor médio em períodos de 30 dias 
--- (por exemplo, 0-30 dias, 31-60 dias, etc.)?
+-- É possível dividir ainda mais esse valor médio em períodos de 30 dias (por exemplo, 0-30 dias, 31-60 dias, etc.)?
 
 WITH plano_teste AS 
 (
