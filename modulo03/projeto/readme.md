@@ -1,10 +1,12 @@
 <h1 align="center">
-Projeto Final de Banco de Dados
+Projeto de Banco de Dados
 </h1>
 
 <p align="center">
-<img src="https://img.shields.io/static/v1?label=Status&message=EM_ANDAMENTO&color=blue&style=for-the-badge"/>
+<img src="https://img.shields.io/static/v1?label=Status&message=FINALIZADO&color=blue&style=for-the-badge"/>
 </p>
+
+### **Observação: O presente projeto foi disponibilizado na plataforma LMS e apresento aqui a resolucação do mesmo, porém o projeto que contará como avaliação final encontra-se no repositório [projeto-final](https://github.com/felipeoliveirafranco/vem-ser-tech-dados/tree/main/modulo03/projeto-final).**
 
 ## 📂 Projeto
 
