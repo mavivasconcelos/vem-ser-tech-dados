@@ -11,7 +11,7 @@ Iremos trabalhar com o caso da plataforma de Streaming 🥑 Foodie-Fi 🥑.
 
 ## Introdução
 
-Empresas baseadas em assinaturas são extremamente populares e Danny percebeu que havia uma grande lacuna no mercado - ele queria criar um novo serviço de streaming que tivesse apenas conteúdo relacionado a alimentos, algo como a Netflix, mas apenas com programas de culinária!
+Empresas baseadas em assinaturas são extremamente populares e Danny percebeu que havia uma grande lacuna no mercado - ele queria criar um novo serviço de streaming que tivesse apenas conteúdo relacionado a alimentos, algo como a Netflix, mas apenas com programas de culinária.
 
 Danny encontrou alguns amigos inteligentes para lançar sua nova startup, Foodie-Fi, em 2020, e começou a vender assinaturas mensais e anuais, proporcionando aos clientes acesso ilimitado sob demanda a vídeos exclusivos de culinária de todo o mundo!
 
@@ -21,11 +21,10 @@ Danny criou a Foodie-Fi com uma mentalidade orientada por dados e queria garanti
 
 A condução da análise foi realizada com o PostgreSQL.
 
-Os scripts de criação e inserção de dados estão no arquivo [tabelas.sql](https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/tabelas.sql). Mas você também pode encontrar os datasets em formato *.csv* na pasta [dataset](https://github.com/felipeoliveirafranco/vem-ser-tech-dados/tree/main/modulo03/projeto-final/dataset).
+Os scripts de criação e inserção de dados estão no arquivo [tabelas.sql](https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/tabelas.sql). Mas você também pode encontrar as tabelas em formato *.csv* na pasta [dataset](https://github.com/felipeoliveirafranco/vem-ser-tech-dados/tree/main/modulo03/projeto-final/dataset).
 
-Danny compartilhou o design de dados para o Foodie-Fi, incluindo breves descrições de cada uma das tabelas do banco de dados.
 
-### Dicionário das variáveis
+### Dicionário dos dados
 
 **Tabela 1: plans**
 
