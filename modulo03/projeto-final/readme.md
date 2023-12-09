@@ -8,7 +8,7 @@ Projeto Final: Desenvolvimento e Análise de um Sistema de Banco de Dados
 
 ## Entrega
 
-A resolução do projeto encontra-se no arquivo [resolucao.md](https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/resolucao.md). Nele você encontrará o contexto do projeto, diagrama entidade-relacionamento, descrição das tabelas, análise de dados com os códigos e resultado das consultas e um relatório de negócio com recomentações para a empresa.
+A resolução do projeto encontra-se no arquivo [resolucao.md](https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/resolucao.md). Nele você encontrará o contexto do projeto, diagrama entidade-relacionamento, descrição das tabelas, análise de dados com os códigos e resultado das consultas e um [relatório de negócio com recomentações para a empresa](https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/resolucao.md#relat%C3%B3rio).
 
 Os scripts de criação das tabelas e inserção de dados encontram-se em [tabelas.sql](https://github.com/felipeoliveirafranco/vem-ser-tech-dados/blob/main/modulo03/projeto-final/tabelas.sql). E temos os dados em formato *.csv* no arquivo [dataset](https://github.com/felipeoliveirafranco/vem-ser-tech-dados/tree/main/modulo03/projeto-final/dataset).
 
