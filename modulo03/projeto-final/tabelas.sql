@@ -7,7 +7,7 @@ CREATE DATABASE database;
 CREATE TABLE plans (
   plan_id INTEGER PRIMARY KEY,
   plan_name VARCHAR(13) NOT NULL,
-  price DECIMAL(5,2) NOT NULL
+  price DECIMAL(5,2)
 );
 
 INSERT INTO plans
