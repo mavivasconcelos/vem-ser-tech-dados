@@ -14,11 +14,10 @@ FROM subscriptions;
 
 SELECT 
    EXTRACT(MONTH FROM start_date) AS numero_mes,
-   FORMAT_DATE('%B', start_date)  AS nome_mes,
-   count(p.plan_id)               AS total_planos
+   TO_CHAR(start_date::DATE, 'Month') AS nome_mes,
+   COUNT(p.plan_id) AS total_planos
 FROM subscriptions s 
-JOIN plans         p
-ON s.plan_id = p.plan_id
+JOIN plans p ON s.plan_id = p.plan_id
 WHERE p.plan_id = 0
 GROUP BY numero_mes, nome_mes
 ORDER BY numero_mes;
@@ -137,9 +136,8 @@ WITH cte AS (
 FROM subscriptions
 WHERE plan_id = 3)
 
-SELECT 
-   round(avg(DATE_DIFF(c.data_plano, s.start_date, DAY))) 
-   AS media_dias
+SELECT  
+   -ROUND(AVG(EXTRACT(day FROM age(s.start_date, c.data_plano)))) AS diferenca_dias
 FROM subscriptions s
 JOIN cte c
 ON s.customer_id = c.cliente
@@ -198,3 +196,5 @@ SELECT
     count(cliente) AS total_clientes
 FROM cte
 WHERE plano = 2 AND proximo_plano = 1;
+
+
