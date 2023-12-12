@@ -5,37 +5,42 @@
 CREATE DATABASE database;
 
 CREATE TABLE plans (
-  plan_id INTEGER PRIMARY KEY,
-  plan_name VARCHAR(13) NOT NULL,
-  price DECIMAL(5,2)
+  	plan_id INTEGER PRIMARY KEY,
+  	plan_name VARCHAR(13) NOT NULL,
+  	price DECIMAL(5,2)
 );
 
-/*Alterar coluna price, pois ela precisa aceitar dados nulos*/
-ALTER TABLE plans
-ALTER COLUMN price DROP NOT NULL;
 
 create table customers (
-	customer_id SERIAL primary KEY,
+	customer_id SERIAL PRIMARY KEY,
 	customer_name VARCHAR(255)
 );
+
+
+CREATE TABLE subscriptions (
+	subscriptions_id INTEGER PRIMARY KEY,
+	customer_id INTEGER,
+	FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
+	plan_id INTEGER,
+	start_date DATE NOT NULL,
+	FOREIGN KEY (plan_id) REFERENCES plans(plan_id)
+);
+
+
 
 INSERT INTO plans
-  (plan_id, plan_name, price)
+  	(plan_id, plan_name, price)
 VALUES
-  ('0', 'trial', '0'),
-  ('1', 'basic monthly', '9.90'),
-  ('2', 'pro monthly', '19.90'),
-  ('3', 'pro annual', '199'),
-  ('4', 'churn', null);
+('0', 'trial', '0'),
+('1', 'basic monthly', '9.90'),
+('2', 'pro monthly', '19.90'),
+('3', 'pro annual', '199'),
+('4', 'churn', null);
 
-create table customers (
-	customer_id SERIAL primary KEY,
-	customer_name VARCHAR(255)
-);
 
-insert into customers 
+INSERT INTO customers 
 	(customer_name)
-values
+VALUES
 ('Thomas Miguel Pereira'),
 ('Thomas João Miguel Farias'),
 ('Davi Lucca Guilherme Novaes'),
@@ -1037,15 +1042,6 @@ values
 ('Maria Cecília Valentina Moraes'),
 ('Carolina Mirella Rezende');
 
-
-CREATE TABLE subscriptions (
-	subscriptions_id SERIAL PRIMARY key,
-	customer_id INTEGER,
-	FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
-	plan_id INTEGER,
-	start_date DATE NOT NULL,
-	FOREIGN KEY (plan_id) REFERENCES plans(plan_id)
-);
 
 INSERT INTO subscriptions
   (customer_id, plan_id, start_date)
