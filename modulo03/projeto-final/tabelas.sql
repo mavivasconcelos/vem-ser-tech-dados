@@ -18,7 +18,7 @@ create table customers (
 
 
 CREATE TABLE subscriptions (
-	subscriptions_id INTEGER PRIMARY KEY,
+	subscriptions_id SERIAL PRIMARY KEY,
 	customer_id INTEGER,
 	FOREIGN KEY (customer_id) REFERENCES customers(customer_id),
 	plan_id INTEGER,
