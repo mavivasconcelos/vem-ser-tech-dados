@@ -23,6 +23,8 @@ Nosso curso é dividido em sete módulos:
 
 &nbsp;
 
-<a href="https://www.linkedin.com/in/felipe-franco-19587211a/" target="_blank">
-        <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white">
-</a>
+<div>
+    <a href="https://www.linkedin.com/in/felipe-franco-19587211a/" target="_blank"> <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+    <a href="https://www.researchgate.net/profile/Felipe-Franco-5" target="_blank"> <img  src="https://img.shields.io/badge/Research_Gate-00CCBB.svg?&style=for-the-badge&logo=ResearchGate&logoColor=white" /></a>
+    <a href="http://lattes.cnpq.br/1120115703751866" target="_blank"><img src="https://img.shields.io/badge/Lattes-4285F4.svg?&style=for-the-badge&logo=lattes&logoColor=white" /></a>
+</div>
